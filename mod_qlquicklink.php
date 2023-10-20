@@ -9,6 +9,7 @@
 namespace Ql\Module\Qlquicklink\Site;
 
 // no direct access
+use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Ql\Module\Qlquicklink\Site\QlquicklinkHelper;
 
@@ -20,4 +21,6 @@ require_once dirname(__FILE__).'/php/classes/QlquicklinkButton.php';
 /** @var $params  */
 $qlquicklinkHelper = new QlquicklinkHelper($module, $params);
 $buttons = $qlquicklinkHelper->getButtonsByParams($params, $qlquicklinkHelper->getNumberOfButtons());
+$styles = $qlquicklinkHelper->getStyles($params);
+
 require ModuleHelper::getLayoutPath('mod_qlquicklink', $params->get('layout', 'default'));

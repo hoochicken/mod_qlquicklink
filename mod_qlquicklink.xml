@@ -41,43 +41,51 @@
 	<config>
 		<fields name="params" addfieldpath="/modules/mod_qlquicklink/php/fields" addrulepath="/modules/mod_qlquicklink/php/rules">
             <fieldset name="basic">
-				<field name="fontSize" type="integer" label="MOD_QLXXXXX_FONTSIZE_LABEL">
-					<
-				</field>
+				<field name="button1" type="spacer" label="MOD_QLQUICKLINK_BUTTON1_LABEL" />
+				<field name="button1_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
+				<field name="button1_image" type="media"  label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button1_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button1_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
-				<field name="button1" type="spacer" label="MOD_QLXXXXX_BUTTON1_LABEL" />
-				<field name="button1_label" label="MOD_QLXXXXX_LABEL_LABEL" />
-				<field name="button1_image" type="media"  label="MOD_QLXXXXX_IMAGE_LABEL" />
-				<field name="button1_fa" type="fa"  label="MOD_QLXXXXX_FA_LABEL" />
-				<field name="button1_link" label="MOD_QLXXXXX_LINK_LABEL" />
+				<field name="button2" type="spacer" label="MOD_QLQUICKLINK_BUTTON2_LABEL" />
+				<field name="button2_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
+				<field name="button2_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button2_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button2_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
-				<field name="button2" type="spacer" label="MOD_QLXXXXX_BUTTON2_LABEL" />
-				<field name="button2_label" label="MOD_QLXXXXX_LABEL_LABEL" />
-				<field name="button2_image" type="media" label="MOD_QLXXXXX_IMAGE_LABEL" />
-				<field name="button2_fa" type="fa"  label="MOD_QLXXXXX_FA_LABEL" />
-				<field name="button2_link" label="MOD_QLXXXXX_LINK_LABEL" />
+				<field name="button3" type="spacer" label="MOD_QLQUICKLINK_BUTTON3_LABEL" />
+				<field name="button3_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
+				<field name="button3_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button3_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button3_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
-				<field name="button3" type="spacer" label="MOD_QLXXXXX_BUTTON3_LABEL" />
-				<field name="button3_label" label="MOD_QLXXXXX_LABEL_LABEL" />
-				<field name="button3_image" type="media" label="MOD_QLXXXXX_IMAGE_LABEL" />
-				<field name="button3_fa" type="fa"  label="MOD_QLXXXXX_FA_LABEL" />
-				<field name="button3_link" label="MOD_QLXXXXX_LINK_LABEL" />
+				<field name="button4" type="spacer" label="MOD_QLQUICKLINK_BUTTON4_LABEL" />
+				<field name="button4_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
+				<field name="button4_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button4_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button4_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
-				<field name="button4" type="spacer" label="MOD_QLXXXXX_BUTTON4_LABEL" />
-				<field name="button4_label" label="MOD_QLXXXXX_LABEL_LABEL" />
-				<field name="button4_image" type="media" label="MOD_QLXXXXX_IMAGE_LABEL" />
-				<field name="button4_fa" type="fa"  label="MOD_QLXXXXX_FA_LABEL" />
-				<field name="button4_link" label="MOD_QLXXXXX_LINK_LABEL" />
-
-				<field name="button5" type="spacer" label="MOD_QLXXXXX_BUTTON5_LABEL" />
-				<field name="button5_label" label="MOD_QLXXXXX_LABEL_LABEL" />
-				<field name="button5_image" type="media" label="MOD_QLXXXXX_IMAGE_LABEL" />
-				<field name="button5_fa" type="fa"  label="MOD_QLXXXXX_FA_LABEL" />
-				<field name="button5_link" label="MOD_QLXXXXX_LINK_LABEL" />
+				<field name="button5" type="spacer" label="MOD_QLQUICKLINK_BUTTON5_LABEL" />
+				<field name="button5_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
+				<field name="button5_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button5_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button5_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
             </fieldset>
 
-			<fieldset
-				name="advanced">
+			<fieldset name="styles">
+				<field name="styles_active" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_USESTYLES_LABEL">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
+				<field name="image_width" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
+				<field name="margin_top" type="integer" label="MOD_QLQUICKLINK_MARGIN_LABEL" default="16" first="12" last="100" step="1"/>
+				<field name="margin_right" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
+				<field name="margin_button_bottom" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
+			</fieldset>
+
+			<fieldset name="advanced">
 				<field
 					name="layout"
 					type="modulelayout"
@@ -89,7 +97,6 @@
 					type="text"
 					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
 					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-
 				<field
 					name="cache"
 					type="list"
@@ -101,7 +108,6 @@
 					<option
 						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
 				</field>
-
 				<field
 					name="cache_time"
 					type="text"
@@ -112,8 +118,7 @@
 					name="cachemode"
 					type="hidden"
 					default="static">
-					<option
-						value="static"></option>
+					<option value="static">static</option>
 				</field>
 			</fieldset>
 		</fields>

@@ -40,10 +40,20 @@ class QlquicklinkHelper
         return array_filter($buttons);
     }
 
+    public function getStyles(Registry $params): string
+    {
+        $style = '';
+        $style .= sprintf('.qlquicklink {top:%spx;right:%spx;background:red;}', $params->get('margin_top', 30), $params->get('margin_right', 0));
+        $style .= sprintf('.qlquicklink ul li {margin-bottom: %spx;}', $params->get('margin_button_bottom', 30));
+        $style .= sprintf('.qlquicklink ul li img {width:%spx;}', $params->get('image_width', 30));
+        $style .= sprintf('.qlquicklink ul li i::before {font-size:%spx;}', $params->get('icon_size', 30));
+        return $style;
+    }
+
     public function getButton(Registry $params, int $i): ?QlquicklinkButton
     {
         $label = sprintf('button%s_label', $i);
-        $label = $params->get($label, 'MOD_QLXXXXX_LABELDUMMIE_LABEL');
+        $label = $params->get($label, 'MOD_QLQUICKLINK_LABELDUMMIE_LABEL');
 
         $link = sprintf('button%s_link', $i);
         $link = $params->get($link, '');
