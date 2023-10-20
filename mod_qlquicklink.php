@@ -14,9 +14,10 @@ use Ql\Module\Qlquicklink\Site\QlquicklinkHelper;
 
 defined('_JEXEC') or die;
 require_once dirname(__FILE__).'/QlquicklinkHelper.php';
+require_once dirname(__FILE__).'/php/classes/QlquicklinkButton.php';
 
 /** @var $module  */
 /** @var $params  */
 $qlquicklinkHelper = new QlquicklinkHelper($module, $params);
-
+$buttons = $qlquicklinkHelper->getButtonsByParams($params, $qlquicklinkHelper->getNumberOfButtons());
 require ModuleHelper::getLayoutPath('mod_qlquicklink', $params->get('layout', 'default'));
