@@ -13,8 +13,8 @@
 	<version>1.0.0</version>
 	<description>MOD_QLQUICKLINK_XML_DESCRIPTION</description>
 	<updateservers>
-        <server type="extension" priority="1" name="qlquicklink - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlquicklink.xml</server>
-    </updateservers>
+    <server type="extension" priority="1" name="qlquicklink - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlquicklink.xml</server>
+  </updateservers>
 	<files>
 		<filename module="mod_qlquicklink">mod_qlquicklink.php</filename>
 		<folder>_jupdate</folder>
@@ -29,9 +29,9 @@
 		<filename>mod_qlquicklink.xml</filename>
 	</files>
 	<media folder="media" destination="mod_qlquicklink">
-        <folder>css</folder>
-        <folder>js</folder>
-    </media>
+    <folder>css</folder>
+    <folder>js</folder>
+  </media>
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.sys.ini</language>
@@ -39,38 +39,38 @@
 		<language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.sys.ini</language>
 	</languages>
 	<config>
-		<fields name="params" addfieldpath="/modules/mod_qlquicklink/php/fields" addrulepath="/modules/mod_qlquicklink/php/rules">
-            <fieldset name="basic">
+		<fields name="params" addfieldpath="/modules/mod_qlquicklink/php/field" addrulepath="/modules/mod_qlquicklink/php/rules">
+      <fieldset name="basic">
 				<field name="button1" type="spacer" label="MOD_QLQUICKLINK_BUTTON1_LABEL" />
 				<field name="button1_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button1_image" type="media"  label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button1_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button1_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
+				<field name="button1_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button1_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
 				<field name="button2" type="spacer" label="MOD_QLQUICKLINK_BUTTON2_LABEL" />
 				<field name="button2_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
 				<field name="button2_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button2_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button2_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button2_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
 				<field name="button3" type="spacer" label="MOD_QLQUICKLINK_BUTTON3_LABEL" />
 				<field name="button3_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
 				<field name="button3_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button3_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button3_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button3_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
 				<field name="button4" type="spacer" label="MOD_QLQUICKLINK_BUTTON4_LABEL" />
 				<field name="button4_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
 				<field name="button4_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button4_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button4_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button4_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
 
 				<field name="button5" type="spacer" label="MOD_QLQUICKLINK_BUTTON5_LABEL" />
 				<field name="button5_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
 				<field name="button5_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button5_fa" type="fa"  label="MOD_QLQUICKLINK_FA_LABEL" />
+				<field name="button5_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button5_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
-            </fieldset>
+      </fieldset>
 
 			<fieldset name="styles">
 				<field name="styles_active" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_USESTYLES_LABEL">

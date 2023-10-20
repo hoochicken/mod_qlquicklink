@@ -20,7 +20,7 @@ defined('_JEXEC') or die;
 /** @var \Joomla\Registry\Registry $params */
 /** @var Ql\Module\Qlquicklink\Site\QlquicklinkHelper $qlquicklinkHelper */
 
-if ($this->params->get('styles_active', true)) {
+if ($params->get('styles_active', true)) {
     $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
     $wa->registerStyle('qlquicklink', 'mod_qlquicklink/styles.css');
     $wa->useStyle('qlquicklink');

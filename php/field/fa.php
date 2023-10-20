@@ -31,6 +31,7 @@ class JFormFieldFa extends JFormField
      */
     protected function getInput()
     {
+        $this->value = trim($this->value);
         $faClassesRaw = $this->getFaClassesByFile($this->filepath);
         $faClasses = [];
         foreach ($faClassesRaw as $faSelector) {
@@ -39,9 +40,9 @@ class JFormFieldFa extends JFormField
         }
         $html = '';
         $html .= sprintf('<select class="form-control" name="%s" id="%s">',$this->name, $this->id);
-        $html .= sprintf('<option %s value="">%s</option>', empty($this->value) ? 'selected' : '', Text::_('MOD_QLQUICKLINK_CHOOSEPLZ'));
+        $html .= sprintf('<option %s value="">%s</option>', empty(trim($this->value)) ? 'selected' : '', Text::_('MOD_QLQUICKLINK_CHOOSEPLZ'));
         foreach ($faClasses as $label => $class) {
-            $html .= sprintf('<option %s value="%s">%s</option>', $label === $this->value ? 'selected' : '', $label, $label);
+            $html .= sprintf('<option %s value="%s">%s</option>', $label === trim($this->value) ? 'selected' : '', $label, $label);
         }
         $html .= '</select>';
         return $html;
@@ -56,5 +57,3 @@ class JFormFieldFa extends JFormField
     }
 
 }
-
-?>

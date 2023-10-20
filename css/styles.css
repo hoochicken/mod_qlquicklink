@@ -1,8 +1,13 @@
 /*
 @package		mod_qlquicklink
-@copyright	    Copyright (C) 2020 ql.de All rights reserved.
+@copyright	    Copyright (C) 2023 ql.de All rights reserved.
 @author 		Mareike Riegel mareike.riegel@ql.de
 @license		GNU General Public License version 2 or later; see LICENSE.txt
 */
 
-.qlquicklink {}
+.qlquicklink {position:fixed;background:transparent;}
+.qlquicklink ul {list-style-type: none;}
+.qlquicklink ul li {}
+.qlquicklink ul li:last-child {}
+.qlquicklink ul li img {}
+.qlquicklink ul li i::before {}

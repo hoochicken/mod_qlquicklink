@@ -22,10 +22,10 @@ class QlquicklinkButton
 
     public function __construct(string $label, string $link, string $fa = '', string $image = '')
     {
-        $this->label = $label;
-        $this->link = $link;
-        $this->fa = $fa;
-        $this->image = $image;
+        $this->label = trim($label);
+        $this->link = trim($link);
+        $this->fa = trim($fa);
+        $this->image = trim($image);
     }
 
     public function getLabel(): string{
