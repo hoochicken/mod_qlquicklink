@@ -32,15 +32,17 @@ if ($params->get('styles_active', true)) {
     <ul>
         <?php foreach ($buttons as $button) : ?>
             <li>
-                <a href="<?= $button->getLink() ?>" title="<?= $button->getLabel() ?>" type="button" class="btn btn-primary">
-                    <?php if (!empty($button->getFa())): ?><i class="fa fa-<?= $button->getFa() ?>"></i><?php endif; ?>
-                    <?php if (!empty($button->getImage())): ?>
-                        <img src="<?= $button->getImage() ?>" alt="<?= Text::_('MOD_QLQUICKLINK_LINKTO') ?><?= $button->getLabel() ?>"/>
-                    <?php endif; ?>
-                    <?php if (empty($button->getFa()) && empty($button->getImage())): ?><?= $button->getLabel() ?><?php endif; ?>
-                </a>
-                <a href="<?= $button->getLink() ?>" title="<?= $button->getLabel() ?>" class="qlquicklink-label">
-                    <?= $button->getLabel() ?>
+                <a href="<?= $button->getLink() ?>" title="<?= $button->getLabel() ?>">
+                    <span href="<?= $button->getLink() ?>" title="<?= $button->getLabel() ?>" type="button" class="btn btn-primary">
+                        <?php if (!empty($button->getFa())): ?><i class="fa fa-<?= $button->getFa() ?>"></i><?php endif; ?>
+                        <?php if (!empty($button->getImage())): ?>
+                            <img src="<?= $button->getImage() ?>" alt="<?= Text::_('MOD_QLQUICKLINK_LINKTO') ?><?= $button->getLabel() ?>"/>
+                        <?php endif; ?>
+                        <?php if (empty($button->getFa()) && empty($button->getImage())): ?><?= $button->getLabel() ?><?php endif; ?>
+                    </span>
+                    <span title="<?= $button->getLabel() ?>" class="qlquicklink-label">
+                        <?= $button->getLabel() ?>
+                    </span>
                 </a>
             </li>
         <?php endforeach; ?>
