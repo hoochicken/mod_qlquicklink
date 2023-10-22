@@ -52,7 +52,7 @@ class JFormFieldFa extends JFormField
     {
         $raw = file_exists($filepath) ? file_get_contents($filepath) : '';
         $fa = array_filter(explode("\n", (string)$raw));
-        array_walk($fa, function($item) { return trim($item); });
+        array_walk($fa, function(&$item) { $item = trim($item); });
         return $fa;
     }
 

@@ -5,9 +5,14 @@
 @license		GNU General Public License version 2 or later; see LICENSE.txt
 */
 
-.qlquicklink {position:fixed;background:transparent;}
+.qlquicklink {position:fixed;background:transparent;z-index:10;}
 .qlquicklink ul {list-style-type: none;}
 .qlquicklink ul li {}
 .qlquicklink ul li:last-child {}
+.qlquicklink ul li.link-visible {background:#fff;}
 .qlquicklink ul li img {}
 .qlquicklink ul li i::before {}
+.qlquicklink ul li a {display: inline-block;}
+.qlquicklink ul li a.qlquicklink-label {display:none;}
+.qlquicklink ul li.link-visible a.qlquicklink-label {display:inline-block;}
+.qlquicklink.round ul li a {border-radius: 50%;padding:15px;}

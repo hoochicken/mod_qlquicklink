@@ -43,10 +43,12 @@ class QlquicklinkHelper
     public function getStyles(Registry $params): string
     {
         $style = '';
-        $style .= sprintf('.qlquicklink {top:%spx;right:%spx;}', $params->get('margin_top', 30), $params->get('margin_right', 0));
+        $style .= sprintf('.qlquicklink {top:%spx;right:%spx;z-index:%s;}', $params->get('margin_top', 30), $params->get('margin_right', 0), $params->get('zindex', 5));
         $style .= sprintf('.qlquicklink ul li {margin-bottom: %spx;}', $params->get('margin_button_bottom', 30));
         $style .= sprintf('.qlquicklink ul li img {width:%spx;}', $params->get('image_width', 30));
-        $style .= sprintf('.qlquicklink ul li i::before {font-size:%spx;}', $params->get('icon_size', 30));
+        $style .= sprintf('.qlquicklink ul li i::before {font-size:%spx;color:%s;}', $params->get('icon_size', 30), $params->get('color', '#ffffff'));
+        $style .= sprintf('.qlquicklink ul li a.btn {background:%s;}', $params->get('background_color', '#30a6dc'));
+        // $style .= sprintf('', $params->get('background_color', '#30a6dc'));
         return $style;
     }
 

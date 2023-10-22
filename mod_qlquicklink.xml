@@ -77,20 +77,32 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-
-				<field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
-				<field name="image_width" type="integer" label="MOD_QLQUICKLINK_IMAGEWIDTH_LABEL" default="30" first="12" last="100" step="1"/>
+				<field name="spacer_positioning" type="spacer" label="MOD_QLQUICKLINK_POSITIONING" />
 				<field name="margin_top" type="integer" label="MOD_QLQUICKLINK_MARGINTOP_LABEL" default="100" first="0" last="1000" step="1"/>
 				<field name="margin_right" type="integer" label="MOD_QLQUICKLINK_MARGINRIGHT_LABEL" default="0" first="0" last="100" step="1"/>
 				<field name="margin_button_bottom" type="integer" label="MOD_QLQUICKLINK_MARGINBUTTONBOTTOM_LABEL" default="20" first="0" last="100" step="1"/>
+				<field name="spacer_icons" type="spacer" label="MOD_QLQUICKLINK_ICONS" />
+				<field name="zindex" type="integer" label="MOD_QLQUICKLINK_ZINDEX_LABEL" default="10" first="0" last="1000" step="5"/>
+				<field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
+				<field name="color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#ffffff" />
+				<field name="background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL" default="#30a6dc" />
+				<field name="shape" type="list" label="MOD_QLQUICKLINK_SHAPE_LABEL" default="round">
+					<option value="round">MOD_QLQUICKLINK_RECTANGULAR</option>
+					<option value="rectangular">MOD_QLQUICKLINK_RECTANGULAR</option>
+				</field>
+				<field name="spacer_image" type="spacer" label="MOD_QLQUICKLINK_IMAGE" />
+				<field name="image_width" type="integer" label="MOD_QLQUICKLINK_IMAGEWIDTH_LABEL" default="30" first="12" last="100" step="1"/>
 			</fieldset>
 
 			<fieldset name="advanced">
 				<field
-					name="layout"
-					type="modulelayout"
-					label="JFIELD_ALT_LAYOUT_LABEL"
-					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL"
+						class="form-select"
+						default="_:default"
+						validate="moduleLayout"
+				/>
 
 				<field
 					name="moduleclass_sfx"
