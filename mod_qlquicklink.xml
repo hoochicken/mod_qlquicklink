@@ -83,8 +83,8 @@
 				<field name="margin_button_bottom" type="integer" label="MOD_QLQUICKLINK_MARGINBUTTONBOTTOM_LABEL" default="20" first="0" last="100" step="1"/>
 				<field name="zindex" type="integer" label="MOD_QLQUICKLINK_ZINDEX_LABEL" default="10" first="0" last="1000" step="5"/>
 				<field name="spacer_strip" type="spacer" label="MOD_QLQUICKLINK_STRIP" />
-				<field name="strip_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#ffffff" />
-				<field name="strip_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL" default="#30a6dc" />
+				<field name="strip_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#30a6dc" />
+				<field name="strip_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL" default="#ffffff" />
 				<field name="spacer_icons" type="spacer" label="MOD_QLQUICKLINK_ICONS" />
 				<field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
 				<field name="icon_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#ffffff" />

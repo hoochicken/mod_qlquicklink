@@ -55,8 +55,6 @@ class QlquicklinkHelper
         $style .= sprintf('.qlquicklink ul li img {width:%spx;}', $params->get('image_width', 30));
         $style .= sprintf('.qlquicklink ul li i::before {font-size:%spx;color:%s;}', $params->get('icon_size', 30), $params->get('icon_color', '#ffffff'));
         $style .= sprintf('.qlquicklink ul li a.btn {background:%s;}', $params->get('icon_background_color', '#30a6dc'));
-        $style .= sprintf('.qlquicklink ul li a.btn {background:%s;}', $params->get('icon_background_color', '#30a6dc'));
-        $style .= sprintf('.qlquicklink ul li a.btn {background:%s;}', $params->get('icon_background_color', '#30a6dc'));
 
         return $style;
     }

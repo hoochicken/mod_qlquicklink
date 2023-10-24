@@ -6,15 +6,17 @@
 */
 
 .qlquicklink {position:fixed;background:transparent;z-index:10;}
-.qlquicklink ul {list-style-type: none;}
-.qlquicklink ul li {}
+.qlquicklink ul {list-style-type: none;float:right;}
+
+.qlquicklink ul li {float:left;clear:both;}
 .qlquicklink ul li:last-child {}
 .qlquicklink ul li.link-visible {}
-.qlquicklink.round ul li {border-top-left-radius: 50%;border-top-right-radius: 50%;}
+.qlquicklink.round ul li {border-top-left-radius: 27px;border-bottom-left-radius: 27px;}
+
+.qlquicklink ul li a {width:100%;display:block;float:left;clear:both;}
 .qlquicklink ul li img {}
 .qlquicklink ul li i::before {}
-.qlquicklink ul li span {display: inline-block;}
-
-.qlquicklink ul li span.qlquicklink-label {display:none;}
-.qlquicklink ul li.link-visible span.qlquicklink-label {display:inline-block;}
+.qlquicklink ul li span {display: inline-block;color:transparent;}
+.qlquicklink ul li.link-visible span {display: inline-block;}
+.qlquicklink ul li span.qlquicklink-label {}
 .qlquicklink.round ul li span.btn {border-radius: 50%;padding:15px;}
