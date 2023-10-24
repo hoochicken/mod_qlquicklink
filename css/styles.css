@@ -9,10 +9,12 @@
 .qlquicklink ul {list-style-type: none;}
 .qlquicklink ul li {}
 .qlquicklink ul li:last-child {}
-.qlquicklink ul li.link-visible {background:#fff;}
+.qlquicklink ul li.link-visible {}
+.qlquicklink.round ul li {border-top-left-radius: 50%;border-top-right-radius: 50%;}
 .qlquicklink ul li img {}
 .qlquicklink ul li i::before {}
-.qlquicklink ul li a {display: inline-block;}
-.qlquicklink ul li a.qlquicklink-label {display:none;}
-.qlquicklink ul li.link-visible a.qlquicklink-label {display:inline-block;}
-.qlquicklink.round ul li a {border-radius: 50%;padding:15px;}
+.qlquicklink ul li span {display: inline-block;}
+
+.qlquicklink ul li span.qlquicklink-label {display:none;}
+.qlquicklink ul li.link-visible span.qlquicklink-label {display:inline-block;}
+.qlquicklink.round ul li span.btn {border-radius: 50%;padding:15px;}
