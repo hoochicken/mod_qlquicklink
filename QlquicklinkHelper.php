@@ -44,13 +44,14 @@ class QlquicklinkHelper
     public function getStyles(Registry $params): string
     {
         $liHeight = 50;
-        $liMarginLeft = $this->width - $liHeight - 30;
+        $liMarginLeft = $this->width - $liHeight - 35;
 
         $style = '';
         $style .= sprintf('.qlquicklink {top:%spx;right:%spx;z-index:%s;}', $params->get('margin_top', 30), $params->get('margin_right', 0), $params->get('zindex', 5));
         $style .= sprintf('.qlquicklink ul {width:%spx;}', $params->get('width', $this->width));
         $style .= sprintf('.qlquicklink ul li {margin-bottom: %spx;width:%spx;margin-left:%spx;}', $params->get('margin_button_bottom', 30), $this->width, $liMarginLeft);
-        $style .= sprintf('.qlquicklink ul li.link-visible {color: %s;background-color:%s;}', $params->get('strip_color', '#30a6dc'), $params->get('strip_background_color', '#ffffff'));
+        $style .= sprintf('.qlquicklink ul li.link-visible {color:%s;background-color:%s;}', $params->get('strip_color', '#30a6dc'), $params->get('strip_background_color', '#ffffff'));
+        $style .= sprintf('.qlquicklink ul li.link-visible span {color:%s;}', $params->get('strip_color', '#30a6dc'));
         $style .= sprintf('.qlquicklink ul li img {width:%spx;}', $params->get('image_width', 30));
         $style .= sprintf('.qlquicklink ul li i::before {font-size:%spx;color:%s;}', $params->get('icon_size', 30), $params->get('icon_color', '#ffffff'));
         $style .= sprintf('.qlquicklink ul li a.btn {background:%s;}', $params->get('icon_background_color', '#30a6dc'));
