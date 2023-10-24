@@ -7,6 +7,7 @@
  */
 
 use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Ql\Module\Qlquicklink\Site\php\classes\QlquicklinkButton;
 
@@ -26,6 +27,9 @@ if ($params->get('styles_active', true)) {
     $wa->registerStyle('qlquicklink', 'mod_qlquicklink/styles.css');
     $wa->useStyle('qlquicklink');
     $wa->addInlineStyle($styles);
+}
+if ($params->get('jquery', false)) {
+    HTMLHelper::_('jquery.framework');
 }
 ?>
 <div class="qlquicklink <?= $params->get('shape', 'round') === 'round' ? 'round' : 'rectangular' ?>" id="module<?php echo $module->id ?>">

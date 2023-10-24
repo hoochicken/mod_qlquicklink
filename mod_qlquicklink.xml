@@ -70,7 +70,7 @@
 				<field name="button5_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
 				<field name="button5_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
 				<field name="button5_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
-      </fieldset>
+      		</fieldset>
 
 			<fieldset name="styles">
 				<field name="styles_active" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_USESTYLES_LABEL">
@@ -95,6 +95,13 @@
 				</field>
 				<field name="spacer_image" type="spacer" label="MOD_QLQUICKLINK_IMAGE" />
 				<field name="image_width" type="integer" label="MOD_QLQUICKLINK_IMAGEWIDTH_LABEL" default="30" first="12" last="100" step="1"/>
+			</fieldset>
+
+			<fieldset name="js">
+				<field name="jquery" type="radio" class="btn-group" default="1" label="MOD_QLFORM_JQUERY_LABEL">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+                </field>
 			</fieldset>
 
 			<fieldset name="advanced">
