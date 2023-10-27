@@ -8,6 +8,7 @@
 
 namespace Ql\Module\Qlquicklink\Site;
 // no direct access
+use Joomla\CMS\Language\Text;
 use Joomla\Registry\Registry;
 use Ql\Module\Qlquicklink\Site\php\classes\QlquicklinkButton;
 use stdClass;
@@ -62,7 +63,7 @@ class QlquicklinkHelper
     public function getButton(Registry $params, int $i): ?QlquicklinkButton
     {
         $label = sprintf('button%s_label', $i);
-        $label = $params->get($label, 'MOD_QLQUICKLINK_LABELDUMMIE_LABEL');
+        $label = $params->get($label, Text::_('MOD_QLQUICKLINK_LABELDUMMIE_LABEL'));
 
         $link = sprintf('button%s_link', $i);
         $link = $params->get($link, '');
