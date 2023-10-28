@@ -1,147 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
-	type="module"
-	client="site"
-	method="upgrade">
-	<name>qlquicklink</name>
-	<author>Mareike Riegel</author>
-	<creationDate>2023</creationDate>
-	<copyright>ql.de</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<authorEmail>mareike.riegel@ql.de</authorEmail>
-	<authorUrl>ql.de</authorUrl>
-	<version>1.0.1</version>
-	<description>MOD_QLQUICKLINK_XML_DESCRIPTION</description>
-	<updateservers>
-    <server type="extension" priority="1" name="qlquicklink - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlquicklink.xml</server>
-  </updateservers>
-	<files>
-		<filename module="mod_qlquicklink">mod_qlquicklink.php</filename>
-		<folder>_jupdate</folder>
-		<folder>css</folder>
-		<folder>js</folder>
-		<folder>language</folder>
-		<folder>tmpl</folder>
-		<folder>php</folder>
-		<filename>QlquicklinkHelper.php</filename>
-		<filename>index.html</filename>
-		<filename>license.txt</filename>
-		<filename>mod_qlquicklink.xml</filename>
-	</files>
-	<media folder="media" destination="mod_qlquicklink">
-    <folder>css</folder>
-    <folder>js</folder>
-  </media>
-	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.sys.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.sys.ini</language>
-	</languages>
-	<config>
-		<fields name="params" addfieldpath="/modules/mod_qlquicklink/php/field" addrulepath="/modules/mod_qlquicklink/php/rules">
-      <fieldset name="basic">
-				<field name="button1" type="spacer" label="MOD_QLQUICKLINK_BUTTON1_LABEL" />
-				<field name="button1_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button1_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button1_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
-				<field name="button1_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
+        type="module"
+        client="site"
+        method="upgrade">
+    <name>qlquicklink</name>
+    <author>Mareike Riegel</author>
+    <creationDate>2023</creationDate>
+    <copyright>ql.de</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>mareike.riegel@ql.de</authorEmail>
+    <authorUrl>ql.de</authorUrl>
+    <version>1.0.1</version>
+    <description>MOD_QLQUICKLINK_XML_DESCRIPTION</description>
+    <updateservers>
+        <server type="extension" priority="1" name="qlquicklink - Updates">
+            https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlquicklink.xml
+        </server>
+    </updateservers>
+    <files>
+        <filename module="mod_qlquicklink">mod_qlquicklink.php</filename>
+        <folder>_jupdate</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <folder>php</folder>
+        <filename>QlquicklinkHelper.php</filename>
+        <filename>index.html</filename>
+        <filename>license.txt</filename>
+        <filename>mod_qlquicklink.xml</filename>
+    </files>
+    <media folder="media" destination="mod_qlquicklink">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_qlquicklink/php/field" addrulepath="/modules/mod_qlquicklink/php/rules">
+            <fieldset name="basic">
+                <field name="icon_explanation" type="explanation"/>
 
-				<field name="button2" type="spacer" label="MOD_QLQUICKLINK_BUTTON2_LABEL" />
-				<field name="button2_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button2_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button2_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
-				<field name="button2_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
+                <field name="button1" type="spacer" label="MOD_QLQUICKLINK_BUTTON1_LABEL"/>
+                <field name="button1_label" label="MOD_QLQUICKLINK_LABEL_LABEL"/>
+                <field name="button1_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL"/>
+                <field name="button1_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL"/>
+                <field name="button1_link" label="MOD_QLQUICKLINK_LINK_LABEL"/>
 
-				<field name="button3" type="spacer" label="MOD_QLQUICKLINK_BUTTON3_LABEL" />
-				<field name="button3_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button3_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button3_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
-				<field name="button3_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
+                <field name="button2" type="spacer" label="MOD_QLQUICKLINK_BUTTON2_LABEL"/>
+                <field name="button2_label" label="MOD_QLQUICKLINK_LABEL_LABEL"/>
+                <field name="button2_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL"/>
+                <field name="button2_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL"/>
+                <field name="button2_link" label="MOD_QLQUICKLINK_LINK_LABEL"/>
 
-				<field name="button4" type="spacer" label="MOD_QLQUICKLINK_BUTTON4_LABEL" />
-				<field name="button4_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button4_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button4_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
-				<field name="button4_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
+                <field name="button3" type="spacer" label="MOD_QLQUICKLINK_BUTTON3_LABEL"/>
+                <field name="button3_label" label="MOD_QLQUICKLINK_LABEL_LABEL"/>
+                <field name="button3_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL"/>
+                <field name="button3_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL"/>
+                <field name="button3_link" label="MOD_QLQUICKLINK_LINK_LABEL"/>
 
-				<field name="button5" type="spacer" label="MOD_QLQUICKLINK_BUTTON5_LABEL" />
-				<field name="button5_label" label="MOD_QLQUICKLINK_LABEL_LABEL" />
-				<field name="button5_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL" />
-				<field name="button5_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL" />
-				<field name="button5_link" label="MOD_QLQUICKLINK_LINK_LABEL" />
-      		</fieldset>
+                <field name="button4" type="spacer" label="MOD_QLQUICKLINK_BUTTON4_LABEL"/>
+                <field name="button4_label" label="MOD_QLQUICKLINK_LABEL_LABEL"/>
+                <field name="button4_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL"/>
+                <field name="button4_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL"/>
+                <field name="button4_link" label="MOD_QLQUICKLINK_LINK_LABEL"/>
 
-			<fieldset name="styles">
-				<field name="styles_active" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_USESTYLES_LABEL">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-				<field name="spacer_positioning" type="spacer" label="MOD_QLQUICKLINK_POSITIONING" />
-				<field name="margin_top" type="integer" label="MOD_QLQUICKLINK_MARGINTOP_LABEL" default="100" first="0" last="1000" step="1"/>
-				<field name="margin_right" type="integer" label="MOD_QLQUICKLINK_MARGINRIGHT_LABEL" default="0" first="0" last="100" step="1"/>
-				<field name="margin_button_bottom" type="integer" label="MOD_QLQUICKLINK_MARGINBUTTONBOTTOM_LABEL" default="20" first="0" last="100" step="1"/>
-				<field name="zindex" type="integer" label="MOD_QLQUICKLINK_ZINDEX_LABEL" default="10" first="0" last="1000" step="5"/>
-				<field name="spacer_strip" type="spacer" label="MOD_QLQUICKLINK_STRIP" />
-				<field name="strip_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#30a6dc" />
-				<field name="strip_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL" default="#ffffff" />
-				<field name="spacer_icons" type="spacer" label="MOD_QLQUICKLINK_ICONS" />
-				<field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12" last="100" step="1"/>
-				<field name="icon_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#ffffff" />
-				<field name="icon_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL" default="#30a6dc" />
-				<field name="icon_shape" type="list" label="MOD_QLQUICKLINK_SHAPE_LABEL" default="round">
-					<option value="round">MOD_QLQUICKLINK_RECTANGULAR</option>
-					<option value="rectangular">MOD_QLQUICKLINK_RECTANGULAR</option>
-				</field>
-				<field name="spacer_image" type="spacer" label="MOD_QLQUICKLINK_IMAGE" />
-				<field name="image_width" type="integer" label="MOD_QLQUICKLINK_IMAGEWIDTH_LABEL" default="30" first="12" last="100" step="1"/>
-			</fieldset>
+                <field name="button5" type="spacer" label="MOD_QLQUICKLINK_BUTTON5_LABEL"/>
+                <field name="button5_label" label="MOD_QLQUICKLINK_LABEL_LABEL"/>
+                <field name="button5_image" type="media" label="MOD_QLQUICKLINK_IMAGE_LABEL"/>
+                <field name="button5_fa" type="fa" label="MOD_QLQUICKLINK_FA_LABEL"/>
+                <field name="button5_link" label="MOD_QLQUICKLINK_LINK_LABEL"/>
+            </fieldset>
 
-			<fieldset name="js">
-				<field name="jquery" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_JQUERY_LABEL">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
+            <fieldset name="styles">
+                <field name="styles_active" type="radio" class="btn-group" default="1"
+                       label="MOD_QLQUICKLINK_USESTYLES_LABEL">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
-			</fieldset>
+                <field name="spacer_positioning" type="spacer" label="MOD_QLQUICKLINK_POSITIONING"/>
+                <field name="margin_top" type="integer" label="MOD_QLQUICKLINK_MARGINTOP_LABEL" default="100" first="0"
+                       last="1000" step="1"/>
+                <field name="margin_right" type="integer" label="MOD_QLQUICKLINK_MARGINRIGHT_LABEL" default="0"
+                       first="0" last="100" step="1"/>
+                <field name="margin_button_bottom" type="integer" label="MOD_QLQUICKLINK_MARGINBUTTONBOTTOM_LABEL"
+                       default="20" first="0" last="100" step="1"/>
+                <field name="zindex" type="integer" label="MOD_QLQUICKLINK_ZINDEX_LABEL" default="10" first="0"
+                       last="1000" step="5"/>
+                <field name="spacer_strip" type="spacer" label="MOD_QLQUICKLINK_STRIP"/>
+                <field name="strip_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#30a6dc"/>
+                <field name="strip_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL"
+                       default="#ffffff"/>
+                <field name="spacer_icons" type="spacer" label="MOD_QLQUICKLINK_ICONS"/>
+                <field name="icon_size" type="integer" label="MOD_QLQUICKLINK_FONTSIZE_LABEL" default="16" first="12"
+                       last="100" step="1"/>
+                <field name="icon_color" type="color" label="MOD_QLQUICKLINK_COLOR_LABEL" default="#ffffff"/>
+                <field name="icon_background_color" type="color" label="MOD_QLQUICKLINK_BACKGROUNDCOLOR_LABEL"
+                       default="#30a6dc"/>
+                <field name="icon_shape" type="list" label="MOD_QLQUICKLINK_SHAPE_LABEL" default="round">
+                    <option value="round">MOD_QLQUICKLINK_RECTANGULAR</option>
+                    <option value="rectangular">MOD_QLQUICKLINK_RECTANGULAR</option>
+                </field>
+                <field name="spacer_image" type="spacer" label="MOD_QLQUICKLINK_IMAGE"/>
+                <field name="image_width" type="integer" label="MOD_QLQUICKLINK_IMAGEWIDTH_LABEL" default="30"
+                       first="12" last="100" step="1"/>
+            </fieldset>
 
-			<fieldset name="advanced">
-				<field
-						name="layout"
-						type="modulelayout"
-						label="JFIELD_ALT_LAYOUT_LABEL"
-						class="form-select"
-						default="_:default"
-						validate="moduleLayout"
-				/>
-				<field
-					name="moduleclass_sfx"
-					type="text"
-					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
-					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
-				<field
-					name="cache"
-					type="list"
-					default="1"
-					label="COM_MODULES_FIELD_CACHING_LABEL"
-					description="COM_MODULES_FIELD_CACHING_DESC">
-					<option
-						value="1">JGLOBAL_USE_GLOBAL</option>
-					<option
-						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
-				</field>
-				<field
-					name="cache_time"
-					type="text"
-					default="900"
-					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
-					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
-				<field
-					name="cachemode"
-					type="hidden"
-					default="static">
-					<option value="static">static</option>
-				</field>
-			</fieldset>
-		</fields>
-	</config>
+            <fieldset name="js">
+                <field name="jquery" type="radio" class="btn-group" default="1" label="MOD_QLQUICKLINK_JQUERY_LABEL">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        class="form-select"
+                        default="_:default"
+                        validate="moduleLayout"
+                />
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option value="static">static</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>

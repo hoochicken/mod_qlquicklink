@@ -36,7 +36,7 @@ class QlquicklinkHelper
     public function getButtonsByParams(Registry $params, int $numberOfButtons): array
     {
         $buttons = [];
-        for ($i = 0; $i <= $numberOfButtons; $i++) {
+        for ($i = 1; $i <= $numberOfButtons; $i++) {
             $buttons[] = $this->getButton($params, $i);
         }
         return array_filter($buttons);

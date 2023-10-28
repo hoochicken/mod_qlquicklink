@@ -17,6 +17,13 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__).'/QlquicklinkHelper.php';
 require_once dirname(__FILE__).'/php/classes/QlquicklinkButton.php';
 
+?>
+<style>
+    option::before {content:'asd'!important;}
+
+</style>
+<?php
+
 /** @var $module  */
 /** @var $params  */
 $qlquicklinkHelper = new QlquicklinkHelper($module, $params);

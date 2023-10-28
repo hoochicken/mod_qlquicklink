@@ -35,14 +35,19 @@ class JFormFieldFa extends JFormField
         $faClassesRaw = $this->getFaClassesByFile($this->filepath);
         $faClasses = [];
         foreach ($faClassesRaw as $faSelector) {
-            $key = substr($faSelector, 4);
-            $faClasses[$key] = $faSelector;
+            $faClasses[] = array_values(array_filter(explode(' ', $faSelector)));
         }
         $html = '';
-        $html .= sprintf('<select class="form-control" name="%s" id="%s">',$this->name, $this->id);
+        $html .= sprintf('<select class="form-control" style="font-family: \'Font Awesome\ 5 Free\', Sans-serif;" name="%s" id="%s">',$this->name, $this->id);
         $html .= sprintf('<option %s value="">%s</option>', empty(trim($this->value)) ? 'selected' : '', Text::_('MOD_QLQUICKLINK_CHOOSEPLZ'));
-        foreach ($faClasses as $label => $class) {
-            $html .= sprintf('<option %s value="%s">%s</option>', $label === trim($this->value) ? 'selected' : '', $label, $label);
+        foreach ($faClasses as $class) {
+            $glyphCode =  (2 !== count($class))
+                ? $class[1] = ''
+                : sprintf('&#%s;', $class[1]);
+            $label = $class[0];
+            $labelLabel = substr($label, 3);
+            $html .= sprintf('<option %s value="%s">%s %s</option>', $label === trim($this->value) ? 'selected' : '', $label, $labelLabel, $glyphCode);
+
         }
         $html .= '</select>';
         return $html;
