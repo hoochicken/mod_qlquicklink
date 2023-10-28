@@ -37,8 +37,6 @@
     <languages>
         <language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.ini</language>
         <language tag="en-GB">language/en-GB/en-GB.mod_qlquicklink.sys.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.mod_qlquicklink.sys.ini</language>
     </languages>
     <config>
         <fields name="params" addfieldpath="/modules/mod_qlquicklink/php/field" addrulepath="/modules/mod_qlquicklink/php/rules">
