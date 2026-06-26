@@ -14,8 +14,8 @@ use Joomla\CMS\Helper\ModuleHelper;
 use Ql\Module\Qlquicklink\Site\QlquicklinkHelper;
 
 defined('_JEXEC') or die;
-require_once dirname(__FILE__).'/QlquicklinkHelper.php';
-require_once dirname(__FILE__).'/php/classes/QlquicklinkButton.php';
+require_once __DIR__.'/QlquicklinkHelper.php';
+require_once __DIR__.'/php/classes/QlquicklinkButton.php';
 
 ?>
 <style>

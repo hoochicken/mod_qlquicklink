@@ -36,7 +36,7 @@ class JFormFieldFa extends JFormField
         $faClasses = [];
         $insertCounter = substr(substr($this->name, strrpos($this->name, '[') + 1), 0, -1);
         foreach ($faClassesRaw as $faSelector) {
-            $faClasses[] = array_values(array_filter(explode(' ', $faSelector)));
+            $faClasses[] = array_values(array_filter(explode(' ', (string) $faSelector)));
         }
         $script = sprintf('javascript:document.getElementById(\'display_%s\').className = \'\'; document.getElementById(\'display_%s\').className = \'fa \' + this.value;', $insertCounter, $insertCounter, trim($this->value));
         $html = '';

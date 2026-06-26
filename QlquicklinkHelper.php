@@ -18,13 +18,11 @@ defined('_JEXEC') or die;
 class QlquicklinkHelper
 {
     public Registry $params;
-    public stdClass $module;
     public int $width = 200;
     public int $numberOfButtons = 5;
 
-    public function __construct($module, $params)
+    public function __construct(public stdClass $module, $params)
     {
-        $this->module = $module;
         $this->params = $params;
     }
 

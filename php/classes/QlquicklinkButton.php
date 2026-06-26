@@ -15,10 +15,10 @@ defined('_JEXEC') or die;
 
 class QlquicklinkButton
 {
-    private string $label;
-    private string $link;
-    private string $fa;
-    private string $image;
+    private readonly string $label;
+    private readonly string $link;
+    private readonly string $fa;
+    private readonly string $image;
 
     public function __construct(string $label, string $link, string $fa = '', string $image = '')
     {

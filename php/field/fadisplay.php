@@ -34,7 +34,7 @@ class JFormFieldFadisplay extends JFormField
         $faClassesRaw = $this->getFaClassesByFile($this->filepath);
         $faClasses = [];
         foreach ($faClassesRaw as $faSelector) {
-            $faClasses[] = array_values(array_filter(explode(' ', $faSelector)));
+            $faClasses[] = array_values(array_filter(explode(' ', (string) $faSelector)));
         }
         $html = '<script></script>';
         $html .= '<ul class="row" style="list-style-type: none;">';
